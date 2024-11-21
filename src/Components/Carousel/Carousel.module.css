@@ -5,7 +5,7 @@
 .hero_img::before {
   content: "";
   position: absolute;
-  bottom: Opx;
+  bottom: 0px;
   width: 100%;
   height: 300px;
   background-image: linear-gradient(
@@ -13,4 +13,11 @@
     rgba(225, 225, 225, 0),
     rgba(255, 255, 255)
   );
+}
+
+.carousel__image {
+  width: 100%; /* Ensures the image spans the entire container width */
+  height: 950px; /* Set the desired uniform height for all images */
+  object-fit: cover; /* Ensures the images are cropped evenly without distortion */
+  display: block; /* Removes extra space beneath images caused by inline behavior */
 }

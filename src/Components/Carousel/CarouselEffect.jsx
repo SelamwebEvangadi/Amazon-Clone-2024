@@ -12,8 +12,15 @@ function CarouselEffect() {
         showIndicators={false}
         showThumbs={false}
       >
-        {img.map((imageItemLink) => {
-          return <img src={imageItemLink} />;
+        {img.map((imageItemLink, index) => {
+          return (
+            <img
+              key={index}
+              src={imageItemLink}
+              alt={`carousel-image-${index}`}
+              className={classes.carousel__image}
+            />
+          );
         })}
       </Carousel>
       <div className={classes.hero_img}></div>
