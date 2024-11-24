@@ -39,6 +39,7 @@ function Results() {
               <ProductCard
                 key={product.id}
                 renderAdd={true}
+                rendDesc={false}
                 product={product}
               />
             ))}
