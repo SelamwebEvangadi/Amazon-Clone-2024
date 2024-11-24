@@ -7,13 +7,6 @@ import { productUrl } from "../../Api/endPoints";
 import ProductCard from "../../Components/Product/ProductCard";
 import Loader from "../../Components/Loader/Loader";
 
-const initialProductState = {
-  id: "",
-  title: "",
-  image: "",
-  rating: { rate: 0, count: 0 },
-  price: 0,
-};
 function ProductDetail() {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
@@ -33,7 +26,11 @@ function ProductDetail() {
   }, [productId]);
   return (
     <LayOut>
-      {isLoading ? <Loader /> : <ProductCard product={product} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ProductCard product={product} flex={true} rendDesc={true} />
+      )}
     </LayOut>
   );
 }
