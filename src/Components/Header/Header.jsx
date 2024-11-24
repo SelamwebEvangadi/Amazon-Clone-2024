@@ -12,7 +12,7 @@ function Header() {
   console.log(basket.length);
 
   return (
-    <>
+    <section className={classes.fixed}>
       <section>
         <div className={classes.header__container}>
           {/* logo section*/}
@@ -74,7 +74,7 @@ function Header() {
         </div>
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 }
 
