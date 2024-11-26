@@ -1,45 +1,62 @@
 import React, { useState, useContext } from "react";
 import classes from "../Auth/Signup.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../Utility/firebase";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import {DataContext} from "../../Components/DataProvider/DataProvider.js"
+import { ClipLoader } from "react-spinners";
+import { DataContext } from "../../Components/DataProvider/DataProvider.js";
 import { Type } from "../../Utility/action.type.js";
 function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const [loading, setLoading] = useState({
+    signIn: false,
+    signUp: false,
+  });
   // console.log(password, email);
 
-  const [{user}, dispatch] = useContext(DataContext)
+  const [{ user }, dispatch] = useContext(DataContext);
+  const navigate = useNavigate();
   console.log(user);
   const authHandler = async (e) => {
     e.preventDefault();
     console.log(e.target.name);
     if (e.target.name === "signin") {
       // # firebase auth
+      setLoading({ ...loading, signIn: true });
       signInWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           // console.log(userInfo);
           dispatch({
             type: Type.SET_USER,
-            user: userInfo.user
-          })
+            user: userInfo.user,
+          });
+          setLoading({ ...loading, signIn: false });
+          navigate("/");
         })
         .catch((err) => {
-          console.log(err);
+          setError(err.message);
+          setLoading({ ...loading, signIn: false });
         });
     } else {
+      setLoading({ ...loading, signUp: true });
       createUserWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           // console.log(userInfo);
+          dispatch({
+            type: Type.SET_USER,
+            user: userInfo.user,
+          });
+          setLoading({ ...loading, signUp: false });
+          navigate("/");
         })
         .catch((err) => {
-          console.log(err);
+          setError(err.message);
+          setLoading({ ...loading, signUp: false });
         });
     }
   };
@@ -47,7 +64,7 @@ function Auth() {
   return (
     <section className={classes.login}>
       {/* {logo} */}
-      <Link>
+      <Link to={"/"}>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
           alt=""
@@ -82,7 +99,11 @@ function Auth() {
             name="signin"
             className={classes.login__SignInButton}
           >
-            Sign In
+            {loading.signIn ? (
+              <ClipLoader color="#000" size={15}></ClipLoader>
+            ) : (
+              " Sign In"
+            )}
           </button>
         </form>
 
@@ -99,8 +120,15 @@ function Auth() {
           name="signup"
           className={classes.login__registerButton}
         >
-          create your amazon account
+          {loading.signUp ? (
+            <ClipLoader color="#000" size={15}></ClipLoader>
+          ) : (
+            " Create your Amazon account"
+          )}
         </button>
+        {error && (
+          <small style={{ paddingTop: "5px", color: "red" }}>{error}</small>
+        )}
       </div>
     </section>
   );
