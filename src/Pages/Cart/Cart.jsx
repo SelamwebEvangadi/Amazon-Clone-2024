@@ -9,21 +9,23 @@ import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
 function Cart() {
   const [{ basket, user }, dispatch] = useContext(DataContext);
   const total = basket.reduce((amount, item) => {
-    return item.price + amount;
+    return item.price * item.amount + amount;
   }, 0);
+  console.log(basket);
   return (
     <LayOut>
       <section className={classes.container}>
         <div className={classes.cart__container}>
           <h2>Hello</h2>
-          <p>Your shopping basket</p>
+          <h3>Your shopping basket</h3>
           <hr />
           {basket?.length === 0 ? (
             <p>Oops! No item in your cart</p>
           ) : (
-            basket?.map((item) => {
+            basket?.map((item, i) => {
               return (
                 <ProductCard
+                  key={i}
                   product={item}
                   rendDesc={true}
                   flex={true}
