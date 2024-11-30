@@ -1,0 +1,236 @@
+[debug] [2024-11-27T22:57:13.584Z] ----------------------------------------------------------------------
+[debug] [2024-11-27T22:57:13.586Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\selam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions --debug
+[debug] [2024-11-27T22:57:13.586Z] CLI Version:   13.27.0
+[debug] [2024-11-27T22:57:13.586Z] Platform:      win32
+[debug] [2024-11-27T22:57:13.587Z] Node Version:  v20.17.0
+[debug] [2024-11-27T22:57:13.587Z] Time:          Wed Nov 27 2024 17:57:13 GMT-0500 (Eastern Standard Time)
+[debug] [2024-11-27T22:57:13.587Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-27T22:57:13.647Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-27T22:57:13.648Z] > authorizing via signed-in user (selamwebbekele@gmail.com)
+[debug] [2024-11-27T22:57:13.649Z] [iam] checking project clone-2024-a9a9c for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-27T22:57:13.650Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:13.650Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:13.651Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions [none]
+[debug] [2024-11-27T22:57:13.652Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:13.652Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-27T22:57:13.803Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions 200
+[debug] [2024-11-27T22:57:13.804Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-27T22:57:13.805Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:13.805Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:13.805Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/clone-2024-a9a9c/serviceAccounts/clone-2024-a9a9c@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-27T22:57:13.805Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/clone-2024-a9a9c/serviceAccounts/clone-2024-a9a9c@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-27T22:57:13.969Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/clone-2024-a9a9c/serviceAccounts/clone-2024-a9a9c@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-27T22:57:13.970Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/clone-2024-a9a9c/serviceAccounts/clone-2024-a9a9c@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'clone-2024-a9a9c'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-27T22:57:13.976Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:13.976Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:13.976Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c [none]
+[debug] [2024-11-27T22:57:14.091Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c 200
+[debug] [2024-11-27T22:57:14.091Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c {"projectNumber":"1015036544069","projectId":"clone-2024-a9a9c","lifecycleState":"ACTIVE","name":"Amazon-Clone-2024","labels":{"firebase":"enabled"},"createTime":"2024-11-26T04:17:47.401138Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:14.093Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.094Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.094Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.095Z] Checked if tokens are valid: true, expires at: 1732751738493
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:14.097Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.098Z] Checked if tokens are valid: true, expires at: 1732751738493
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:14.099Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.099Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.099Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-27T22:57:14.100Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:14.101Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-27T22:57:14.101Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:14.103Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-27T22:57:14.103Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudbuild.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:14.105Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-27T22:57:14.105Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/artifactregistry.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:14.416Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-27T22:57:14.417Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:14.423Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-27T22:57:14.423Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-27T22:57:14.450Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-27T22:57:14.451Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:14.459Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-27T22:57:14.459Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:14.460Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.460Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.461Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-2024-a9a9c/adminSdkConfig [none]
+[debug] [2024-11-27T22:57:14.754Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-2024-a9a9c/adminSdkConfig 200
+[debug] [2024-11-27T22:57:14.755Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-2024-a9a9c/adminSdkConfig {"projectId":"clone-2024-a9a9c","storageBucket":"clone-2024-a9a9c.firebasestorage.app"}
+[debug] [2024-11-27T22:57:14.756Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.757Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:14.758Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/clone-2024-a9a9c/configs [none]
+[debug] [2024-11-27T22:57:14.905Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/clone-2024-a9a9c/configs 200
+[debug] [2024-11-27T22:57:14.905Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/clone-2024-a9a9c/configs {}
+[debug] [2024-11-27T22:57:14.907Z] Validating nodejs source
+[debug] [2024-11-27T22:57:15.658Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "stripe": "^17.4.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-27T22:57:15.661Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-27T22:57:15.662Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-27T22:57:15.669Z] Found firebase-functions binary at 'C:\Users\selam\OneDrive\Desktop\Evangadi\Evangadi2\Phase-4\Amazon-Clone-2024\amazon-clone-2024\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8069
+
+[debug] [2024-11-27T22:57:16.137Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":10,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:21.167Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.167Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.168Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-27T22:57:21.168Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:21.506Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-27T22:57:21.507Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:21.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-27T22:57:21.508Z] > authorizing via signed-in user (selamwebbekele@gmail.com)
+[debug] [2024-11-27T22:57:21.509Z] [iam] checking project clone-2024-a9a9c for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-27T22:57:21.509Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.510Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.510Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions [none]
+[debug] [2024-11-27T22:57:21.510Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:21.510Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-27T22:57:21.604Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions 200
+[debug] [2024-11-27T22:57:21.605Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-27T22:57:21.607Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.607Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.609Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/clone-2024-a9a9c/instances pageSize=100&pageToken=
+[debug] [2024-11-27T22:57:21.892Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/clone-2024-a9a9c/instances 200
+[debug] [2024-11-27T22:57:21.894Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/clone-2024-a9a9c/instances {}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\selam\OneDrive\Desktop\Evangadi\Evangadi2\Phase-4\Amazon-Clone-2024\amazon-clone-2024\functions (61.82 KB) for uploading 
+[debug] [2024-11-27T22:57:21.932Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.932Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:21.933Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/clone-2024-a9a9c/locations/-/functions [none]
+[debug] [2024-11-27T22:57:22.420Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/clone-2024-a9a9c/locations/-/functions 200
+[debug] [2024-11-27T22:57:22.421Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/clone-2024-a9a9c/locations/-/functions {}
+[debug] [2024-11-27T22:57:22.423Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.423Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.424Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-2024-a9a9c/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-27T22:57:22.820Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-2024-a9a9c/locations/-/functions 200
+[debug] [2024-11-27T22:57:22.821Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-2024-a9a9c/locations/-/functions {"functions":[{"name":"projects/clone-2024-a9a9c/locations/us-central1/functions/api","buildConfig":{"build":"projects/1015036544069/locations/us-central1/builds/b6d0b1dc-59a8-4d17-bcf0-fcd2a68d768e","runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-1015036544069-us-central1","object":"api/function-source.zip","generation":"1732745122755057"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/clone-2024-a9a9c/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1015036544069-us-central1","object":"api/function-source.zip","generation":"1732745122755057"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/clone-2024-a9a9c/serviceAccounts/1015036544069-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"state":"FAILED","updateTime":"2024-11-27T22:05:41.521872478Z","labels":{"firebase-functions-hash":"c57e452091592d2e5bfee2f4d9074c5a9c1954bb","deployment-tool":"cli-firebase"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/clone-2024-a9a9c/locations/us-central1/services/api for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-clone-2024-a9a9c.cloudfunctions.net/api","createTime":"2024-11-27T22:05:23.141976431Z"}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:22.827Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.828Z] Checked if tokens are valid: true, expires at: 1732751738493
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:22.829Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.829Z] Checked if tokens are valid: true, expires at: 1732751738493
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:22.830Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.830Z] Checked if tokens are valid: true, expires at: 1732751738493
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-27T22:57:22.831Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.831Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:22.832Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/run.googleapis.com [none]
+[debug] [2024-11-27T22:57:22.832Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/run.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:22.833Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/eventarc.googleapis.com [none]
+[debug] [2024-11-27T22:57:22.833Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/eventarc.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:22.835Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/pubsub.googleapis.com [none]
+[debug] [2024-11-27T22:57:22.835Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/pubsub.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:22.837Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/storage.googleapis.com [none]
+[debug] [2024-11-27T22:57:22.838Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/storage.googleapis.com x-goog-quota-user=projects/clone-2024-a9a9c
+[debug] [2024-11-27T22:57:23.147Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/pubsub.googleapis.com 200
+[debug] [2024-11-27T22:57:23.148Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:23.181Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/storage.googleapis.com 200
+[debug] [2024-11-27T22:57:23.181Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:23.185Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/eventarc.googleapis.com 200
+[debug] [2024-11-27T22:57:23.185Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-11-27T22:57:23.325Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/run.googleapis.com 200
+[debug] [2024-11-27T22:57:23.326Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-2024-a9a9c/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-27T22:57:23.327Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.327Z] Checked if tokens are valid: true, expires at: 1732751738493
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-27T22:57:23.327Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.327Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.328Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1015036544069/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-27T22:57:23.329Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1015036544069/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-27T22:57:23.595Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1015036544069/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-27T22:57:23.595Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1015036544069/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1015036544069@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"118446504363081215524"}}
+[debug] [2024-11-27T22:57:23.715Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1015036544069/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-27T22:57:23.716Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1015036544069/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1015036544069@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"111845369688741356946"}}
+[debug] [2024-11-27T22:57:23.721Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.721Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.722Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c [none]
+[debug] [2024-11-27T22:57:23.822Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c 200
+[debug] [2024-11-27T22:57:23.823Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/clone-2024-a9a9c {"projectNumber":"1015036544069","projectId":"clone-2024-a9a9c","lifecycleState":"ACTIVE","name":"Amazon-Clone-2024","labels":{"firebase":"enabled"},"createTime":"2024-11-26T04:17:47.401138Z"}
+[debug] [2024-11-27T22:57:23.826Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.827Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:23.828Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/clone-2024-a9a9c/billingInfo [none]
+[debug] [2024-11-27T22:57:24.010Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/clone-2024-a9a9c/billingInfo 200
+[debug] [2024-11-27T22:57:24.011Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/clone-2024-a9a9c/billingInfo {"name":"projects/clone-2024-a9a9c/billingInfo","projectId":"clone-2024-a9a9c","billingAccountName":"billingAccounts/011B54-E507CC-527D8D","billingEnabled":true}
+[info] i  functions: Skipping the deploy of unchanged functions. 
+[info] +  functions[api(us-central1)] Skipped (No changes detected) 
+[debug] [2024-11-27T22:57:24.016Z] Total Function Deployment time: 0
+[debug] [2024-11-27T22:57:24.017Z] 0 Functions Deployed
+[debug] [2024-11-27T22:57:24.017Z] 0 Functions Errored
+[debug] [2024-11-27T22:57:24.017Z] 0 Function Deployments Aborted
+[debug] [2024-11-27T22:57:24.018Z] Average Function Deployment time: NaN
+[debug] [2024-11-27T22:57:24.084Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-27T22:57:24.086Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.087Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.088Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.089Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.089Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/clone-2024-a9a9c/locations/us-central1/repositories/gcf-artifacts/packages/api [none]
+[debug] [2024-11-27T22:57:24.091Z] >>> [apiv2][query] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list [none]
+[debug] [2024-11-27T22:57:24.304Z] <<< [apiv2][status] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list 404
+[debug] [2024-11-27T22:57:24.304Z] <<< [apiv2][body] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-27T22:57:24.305Z] Failed docker command with error  Request to https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-27T22:57:24.311Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.311Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.312Z] >>> [apiv2][query] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list [none]
+[debug] [2024-11-27T22:57:24.376Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/clone-2024-a9a9c/locations/us-central1/repositories/gcf-artifacts/packages/api 404
+[debug] [2024-11-27T22:57:24.377Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/clone-2024-a9a9c/locations/us-central1/repositories/gcf-artifacts/packages/api {"error":{"code":404,"message":"Package \"projects/clone-2024-a9a9c/locations/us-central1/repositories/gcf-artifacts/packages/api\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-27T22:57:24.466Z] <<< [apiv2][status] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list 404
+[debug] [2024-11-27T22:57:24.466Z] <<< [apiv2][body] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-27T22:57:24.467Z] Failed docker command with error  Request to https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-27T22:57:24.585Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.586Z] Checked if tokens are valid: true, expires at: 1732751738493
+[debug] [2024-11-27T22:57:24.587Z] >>> [apiv2][query] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list [none]
+[debug] [2024-11-27T22:57:24.732Z] <<< [apiv2][status] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list 404
+[debug] [2024-11-27T22:57:24.733Z] <<< [apiv2][body] GET https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-27T22:57:24.734Z] Failed docker command with error  Request to https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/clone-2024-a9a9c/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/clone-2024-a9a9c/us/gcf 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/clone-2024-a9a9c/overview
